@@ -2,7 +2,6 @@
 [core]
     editor = /usr/local/bin/vim
     excludesfile = /Users/philip.gollucci/.gitignore_global
-    pager=delta
 
 #}}}
 # user {{{
@@ -61,9 +60,6 @@
 [remote "origin"]
   fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 
-[credential]
-	helper = osxkeychain
-
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -89,5 +85,12 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+
 [init]
 	defaultBranch = main
+
+[credential "https://github.com"]
+	helper = !/usr/local/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = !/usr/local/bin/gh auth git-credential

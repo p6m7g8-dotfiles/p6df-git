@@ -32,8 +32,6 @@ p6df::modules::git::external::brew() {
 
   brew install tig
  
-  brew install gr
-
   brew install gitter-cli
 
   git lfs install
