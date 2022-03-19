@@ -10,7 +10,7 @@
 p6df::modules::git::deps() {
   ModuleDeps=(
     sorin-ionescu/prezto:modules/git
-    p6m7g8/p6git
+    p6m7g8-dotfiles/p6git
   )
 }
 
@@ -46,8 +46,8 @@ p6df::modules::git::external::brew() {
 ######################################################################
 p6df::modules::git::home::symlink() {
 
-  ln -fs $P6_DFZ_SRC_P6M7G8_DIR/p6df-git/share/.gitconfig .gitconfig
-  ln -fs $P6_DFZ_SRC_P6M7G8_DIR/p6df-git/share/.gitignore_global .gitignore_global
+  ln -fs $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitconfig .gitconfig
+  ln -fs $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitignore_global .gitignore_global
 }
 
 ######################################################################
