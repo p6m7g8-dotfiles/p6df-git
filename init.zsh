@@ -10,7 +10,7 @@
 p6df::modules::git::deps() {
   ModuleDeps=(
     sorin-ionescu/prezto:modules/git
-    p6m7g8/p6git
+    p6m7g8-dotfiles/p6git
   )
 }
 
