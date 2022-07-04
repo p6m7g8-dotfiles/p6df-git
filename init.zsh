@@ -42,6 +42,8 @@ p6df::modules::git::external::brew() {
 #
 # Function: p6df::modules::git::home::symlink()
 #
+#  Depends:	 p6_file
+#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::git::home::symlink() {
@@ -60,7 +62,7 @@ p6df::modules::git::home::symlink() {
 p6df::modules::git::init() {
 
   p6df::modules::git::aliases::init
-  p6df::modules::git::prompt
+  p6df::modules::git::prompt::init
 }
 
 ######################################################################
@@ -115,13 +117,14 @@ p6df::modules::git::aliases::init() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::prompt()
+# Function: p6df::modules::git::prompt::init()
 #
 #>
 ######################################################################
-p6df::modules::git::prompt() {
+p6df::modules::git::prompt::init() {
 
   add-zsh-hook precmd p6df::modules::git::prompt_precmd
+  p6df::core::prompt::line::add p6df::modules::git::prompt::line
 }
 
 ######################################################################
@@ -179,6 +182,7 @@ p6df::modules::git::prompt::line() {
 #  Returns:
 #	str - str
 #
+#  Depends:	 p6_string
 #>
 ######################################################################
 p6_git_prompt_info() {
