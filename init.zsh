@@ -42,7 +42,6 @@ p6df::modules::git::external::brew() {
 #
 # Function: p6df::modules::git::home::symlink()
 #
-#  Depends:	 p6_file
 #  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
@@ -182,14 +181,13 @@ p6df::modules::git::prompt::line() {
 #  Returns:
 #	str - str
 #
-#  Depends:	 p6_string
 #>
 ######################################################################
 p6_git_prompt_info() {
 
   local str
   if ! p6_string_blank "$g_org"; then
-    str="git:\t  $g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
+    str="git:\t\t  $g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
   fi
 
   p6_return_str "$str"
