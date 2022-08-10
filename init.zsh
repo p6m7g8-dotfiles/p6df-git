@@ -1,5 +1,4 @@
-# shellcheck shell=zsh
-
+# shellcheck shell=bash
 ######################################################################
 #<
 #
@@ -9,8 +8,9 @@
 ######################################################################
 p6df::modules::git::deps() {
   ModuleDeps=(
-    sorin-ionescu/prezto:modules/git
+    p6m7g8-dotfiles/p6df-zsh
     p6m7g8-dotfiles/p6git
+    sorin-ionescu/prezto:modules/git
   )
 }
 
@@ -35,6 +35,8 @@ p6df::modules::git::external::brew() {
   brew install gitter-cli
 
   git lfs install
+
+  p6_return_void
 }
 
 ######################################################################
@@ -49,6 +51,8 @@ p6df::modules::git::home::symlink() {
 
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitconfig" ".gitconfig"
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitignore_global" ".gitignore_global"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -62,6 +66,8 @@ p6df::modules::git::init() {
 
   p6df::modules::git::aliases::init
   p6df::modules::git::prompt::init
+
+  p6_return_void
 }
 
 ######################################################################
@@ -111,6 +117,8 @@ p6df::modules::git::aliases::init() {
   alias gT='p6_git_p6_revert'
   alias grhh='p6_git_p6_reset_head_hard'
   alias gU='p6_git_p6_update'
+
+  p6_return_void
 }
 
 ######################################################################
