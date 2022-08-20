@@ -10,7 +10,6 @@ p6df::modules::git::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-zsh
     p6m7g8-dotfiles/p6git
-    sorin-ionescu/prezto:modules/git
   )
 }
 
@@ -64,7 +63,6 @@ p6df::modules::git::home::symlink() {
 ######################################################################
 p6df::modules::git::init() {
 
-  p6df::modules::git::aliases::init
   p6df::modules::git::prompt::init
 
   p6_return_void
@@ -78,13 +76,6 @@ p6df::modules::git::init() {
 #>
 ######################################################################
 p6df::modules::git::aliases::init() {
-
-  ## undo aliases from sorin-ionescu/prezto:modules/git
-  ## keep the other stuff
-  local a
-  for a in $(alias | grep git | awk -F= '{ print $1 }'); do
-    unalias $a
-  done
 
   ## my aliases (finally!)
   alias g='p6_git_cmd'
@@ -142,6 +133,7 @@ p6df::modules::git::prompt::init() {
 #>
 ######################################################################
 p6df::modules::git::prompt_precmd() {
+
   p6df::modules::git::vcs_info
 }
 
@@ -195,7 +187,7 @@ p6_git_prompt_info() {
 
   local str
   if ! p6_string_blank "$g_org"; then
-    str="git:\t\t  $g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
+    str="git:\t$g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
   fi
 
   p6_return_str "$str"
