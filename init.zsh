@@ -30,7 +30,7 @@ p6df::modules::git::external::brew() {
   brew install git-secret
 
   brew install tig
- 
+
   brew install gitter-cli
 
   git lfs install
