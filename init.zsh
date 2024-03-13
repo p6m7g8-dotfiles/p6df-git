@@ -77,37 +77,37 @@ p6df::modules::git::init() {
 ######################################################################
 p6df::modules::git::aliases::init() {
 
-  ## my aliases (finally!)
-  alias g='p6_git_cmd'
-  alias ga='p6_git_p6_add'
-  alias gA='p6_git_p6_add_all'
-  alias gb='p6_git_p6_branch'
-  alias gc='p6_git_p6_clone'
-  alias gc='p6_git_p6_commit'
-  alias gcb='p6_git_p6_branch_create'
-  alias gcl='p6_git_p6_commit_last_edit'
-  alias gco='p6_git_p6_checkout'
-  alias gcod='p6_git_p6_checkout_default'
-  alias gd='p6_git_p6_diff'
-  alias gdd='p6_git_p6_diff_default'
-  alias gdh='p6_git_p6_diff_head'
-  alias gdp='p6_git_p6_diff_previous'
-  alias gf='p6_git_p6_fetch'
-  alias gg='p6_git_p6_grep'
-  alias ggf='p6_git_p6_grep_files'
-  alias gl='p6_git_p6_log'
-  alias gm='p6_git_p6_merge'
-  alias gp='p6_git_p6_pull'
-  alias gP='p6_git_p6_push'
-  alias gPt='p6_git_p6_push_tags'
-  alias gR='p6_git_p6_restore'
-  alias gra='p6_git_p6_rebase_abort'
-  alias grc='p6_git_p6_rebase_continue'
-  alias gs='p6_git_p6_status'
-  alias gS='p6_git_p6_sync'
-  alias gT='p6_git_p6_revert'
-  alias grhh='p6_git_p6_reset_head_hard'
-  alias gU='p6_git_p6_update'
+  alias g=git
+
+  alias gcod='p6_git_util_checkout_default'
+  alias gdd='p6_git_util_diff_default'
+  alias gl='p6_git_util_log'
+  alias gS='p6_git_util_sync'
+  alias gU='p6_git_util_update'
+
+  alias ga='p6_git_cli_add'
+  alias gA='p6_git_cli_add_all'
+  alias gb='p6_git_cli_branch_verbose_verbose'
+  alias gc='p6_git_cli_commit_verbose_with_message'
+  alias gcb='p6_git_cli_branch_create'
+  alias gcl='p6_git_cli_commit_last_edit'
+  alias gco='p6_git_cli_checkout'
+  alias gd='p6_git_cli_diff'
+  alias gdh='p6_git_cli_diff_head'
+  alias gdp='p6_git_cli_diff_previous'
+  alias gf='p6_git_cli_fetch_all'
+  alias gg='p6_git_cli_grep'
+  alias ggf='p6_git_cli_grep_files'
+  alias gm='p6_git_cli_merge'
+  alias gp='p6_git_cli_pull_rebase_autostash_ff_only'
+  alias gP='p6_git_cli_push_u'
+  alias gPt='p6_git_cli_push_tags'
+  alias gR='p6_git_cli_restore'
+  alias gra='p6_git_cli_rebase_abort'
+  alias grc='p6_git_cli_rebase_continue'
+  alias gs='p6_git_cli_status_s'
+  alias gT='p6_git_cli_revert'
+  alias grhh='p6_git_cli_reset_head_hard'
 
   p6_return_void
 }
@@ -146,12 +146,12 @@ p6df::modules::git::prompt_precmd() {
 ######################################################################
 p6df::modules::git::vcs_info() {
 
-  if p6_git_inside_tree; then
-    g_org=$(p6_git_org_org_get)
-    g_repo=$(p6_git_org_repo_get)
-    g_shortsha=$(p6_git_sha_short_get)
+  if p6_git_util_inside_tree; then
+    g_org=$(p6_git_util_org_from_origin)
+    g_repo=$(p6_git_util_repo_from_origin)
+    g_shortsha=$(p6_git_util_sha_short_get)
     g_branch=$(p6_git_branch_get)
-    g_status=$(p6_git_dirty_get)
+    g_status=$(p6_git_util_dirty_get)
   else
     unset g_org
     unset g_repo
