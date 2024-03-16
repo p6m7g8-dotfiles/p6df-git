@@ -107,7 +107,7 @@ p6df::modules::git::aliases::init() {
   alias grc='p6_git_cli_rebase_continue'
   alias gs='p6_git_cli_status_s'
   alias gT='p6_git_cli_revert'
-  alias grhh='p6_git_cli_reset_head_hard'
+  alias grhh='p6_git_cli_reset_hard_head'
 
   p6_return_void
 }
