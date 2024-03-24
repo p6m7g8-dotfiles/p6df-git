@@ -22,16 +22,16 @@ p6df::modules::git::deps() {
 ######################################################################
 p6df::modules::git::external::brew() {
 
-  brew install git
-  brew install git-delta
-  brew install git-extras
-  brew install git-lfs
-  brew install git-quick-stats
-  brew install git-secret
+  p6df::modules::homebrew::cli::brew::install git
+  p6df::modules::homebrew::cli::brew::install git-delta
+  p6df::modules::homebrew::cli::brew::install git-extras
+  p6df::modules::homebrew::cli::brew::install git-lfs
+  p6df::modules::homebrew::cli::brew::install git-quick-stats
+  p6df::modules::homebrew::cli::brew::install git-secret
 
-  brew install tig
+  p6df::modules::homebrew::cli::brew::install tig
 
-  brew install gitter-cli
+  p6df::modules::homebrew::cli::brew::install gitter-cli
 
   git lfs install
 
@@ -57,11 +57,17 @@ p6df::modules::git::home::symlink() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::init()
+# Function: p6df::modules::git::init(_module, dir)
+#
+#  Args:
+#	_module -
+#	dir -
 #
 #>
 ######################################################################
 p6df::modules::git::init() {
+  local _module="$1"
+  local dir="$2"
 
   p6df::modules::git::prompt::init
 
@@ -77,39 +83,39 @@ p6df::modules::git::init() {
 ######################################################################
 p6df::modules::git::aliases::init() {
 
-  alias g=git
+  p6_alias "g" "git"
 
-  alias gcod='p6_git_util_checkout_default'
-  alias gdd='p6_git_util_diff_default'
-  alias gl='p6_git_util_log'
-  alias gSync='p6_git_util_sync'
-  alias gU='p6_git_util_update'
+  p6_alias "gcod" "p6_git_util_checkout_default"
+  p6_alias "gdd" "p6_git_util_diff_default"
+  p6_alias "gl" "p6_git_util_log"
+  p6_alias "gSync" "p6_git_util_sync"
+  p6_alias "gU" "p6_git_util_update"
 
-  alias ga='p6_git_cli_add'
-  alias gA='p6_git_cli_add_all'
-  alias gb='p6_git_cli_branch_verbose_verbose'
-  alias gbc='p6_git_cli_branch_create'
-  alias gbD='p6_git_cli_branch_Delete'
-  alias gC='p6_git_cli_commit_with_message'
-  alias gc='p6_git_cli_commit_verbose'
-  alias gcl='p6_git_cli_commit_last_edit'
-  alias gco='p6_git_cli_checkout'
-  alias gd='p6_git_cli_diff'
-  alias gdh='p6_git_cli_diff_head'
-  alias gdp='p6_git_cli_diff_previous'
-  alias gf='p6_git_cli_fetch_all'
-  alias gg='p6_git_cli_grep'
-  alias ggf='p6_git_cli_grep_files'
-  alias gm='p6_git_cli_merge'
-  alias gp='p6_git_cli_pull_rebase_autostash_ff_only'
-  alias gP='p6_git_cli_push_u'
-  alias gPt='p6_git_cli_push_tags'
-  alias gR='p6_git_cli_restore'
-  alias gra='p6_git_cli_rebase_abort'
-  alias grc='p6_git_cli_rebase_continue'
-  alias gs='p6_git_cli_status_s'
-  alias gT='p6_git_cli_revert'
-  alias grhh='p6_git_cli_reset_hard_head'
+  p6_alias "gA" "p6_git_cli_add_all"
+  p6_alias "ga" "p6_git_cli_add"
+  p6_alias "gb" "p6_git_cli_branch_verbose_verbose"
+  p6_alias "gbc" "p6_git_cli_branch_create"
+  p6_alias "gbD" "p6_git_cli_branch_Delete"
+  p6_alias "gc" "p6_git_cli_commit_verbose"
+  p6_alias "gC" "p6_git_cli_commit_with_message"
+  p6_alias "gcl" "p6_git_cli_commit_last_edit"
+  p6_alias "gco" "p6_git_cli_checkout"
+  p6_alias "gd" "p6_git_cli_diff"
+  p6_alias "gdh" "p6_git_cli_diff_head"
+  p6_alias "gdp" "p6_git_cli_diff_previous"
+  p6_alias "gf" "p6_git_cli_fetch_all"
+  p6_alias "gg" "p6_git_cli_grep"
+  p6_alias "ggf" "p6_git_cli_grep_files"
+  p6_alias "gm" "p6_git_cli_merge"
+  p6_alias "gp" "p6_git_cli_pull_rebase_autostash_ff_only"
+  p6_alias "gP" "p6_git_cli_push_u"
+  p6_alias "gPt" "p6_git_cli_push_tags"
+  p6_alias "gR" "p6_git_cli_restore"
+  p6_alias "gra" "p6_git_cli_rebase_abort"
+  p6_alias "grc" "p6_git_cli_rebase_continue"
+  p6_alias "grhh" "p6_git_cli_reset_hard_head"
+  p6_alias "gs" "p6_git_cli_status_s"
+  p6_alias "gT" "p6_git_cli_revert"
 
   p6_return_void
 }
