@@ -1,7 +1,7 @@
 # core {{{
 [core]
-editor = /usr/local/bin/vim
-	excludesFile = ~/.gitignore_global
+editor = /opt/homebrew/bin/vim
+excludesFile = ~/.gitignore_global
 
 #}}}
 # user {{{
