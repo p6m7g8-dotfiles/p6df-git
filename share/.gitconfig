@@ -1,7 +1,7 @@
 # core {{{
 [core]
 editor = /usr/local/bin/vim
-excludesfile = /Users/philip.gollucci/.gitignore_global
+	excludesFile = ~/.gitignore_global
 
 #}}}
 # user {{{

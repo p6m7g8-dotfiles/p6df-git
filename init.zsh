@@ -90,6 +90,7 @@ p6df::modules::git::aliases::init() {
   p6_alias "gl" "p6_git_util_log"
   p6_alias "gSync" "p6_git_util_sync"
   p6_alias "gU" "p6_git_util_update"
+  p6_alias "gCPSF" "p6_git_util_commit_push_squashed_fix"
 
   p6_alias "gA" "p6_git_cli_add_all"
   p6_alias "ga" "p6_git_cli_add"
@@ -109,6 +110,7 @@ p6df::modules::git::aliases::init() {
   p6_alias "gm" "p6_git_cli_merge"
   p6_alias "gp" "p6_git_cli_pull_rebase_autostash_ff_only"
   p6_alias "gP" "p6_git_cli_push_u"
+  p6_alias "gPF" "p6_git_cli_push_f"
   p6_alias "gPt" "p6_git_cli_push_tags"
   p6_alias "gR" "p6_git_cli_restore"
   p6_alias "gra" "p6_git_cli_rebase_abort"
