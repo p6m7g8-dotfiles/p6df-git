@@ -110,7 +110,7 @@ p6df::modules::git::aliases::init() {
   p6_alias "gm" "p6_git_cli_merge"
   p6_alias "gp" "p6_git_cli_pull_rebase_autostash_ff_only"
   p6_alias "gP" "p6_git_cli_push_u"
-  p6_alias "gPF" "p6_git_cli_push_f"
+  p6_alias "gPF" "p6_git_cli_push_fu"
   p6_alias "gPt" "p6_git_cli_push_tags"
   p6_alias "gR" "p6_git_cli_restore"
   p6_alias "gra" "p6_git_cli_rebase_abort"
