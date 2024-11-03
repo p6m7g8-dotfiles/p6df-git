@@ -8,6 +8,7 @@ excludesFile = ~/.gitignore_global
 [user]
 name = Philip M. Gollucci
 email = pgollucci@p6m7g8.com
+signingkey = 0xF699A450D21D2752
 
 #}}}
 # color {{{
@@ -85,3 +86,7 @@ helper = !/opt/homebrew/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
 helper = !/opt/homebrew/bin/gh auth git-credential
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
