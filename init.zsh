@@ -31,8 +31,6 @@ p6df::modules::git::external::brew() {
 
   p6df::modules::homebrew::cli::brew::install tig
 
-  p6df::modules::homebrew::cli::brew::install gitter-cli
-
   git lfs install
 
   p6_return_void
