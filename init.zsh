@@ -77,7 +77,7 @@ p6df::modules::git::init() {
 #
 # Function: p6df::modules::git::aliases::init()
 #
-#  Environment:	 CPSF
+#  Environment:	 CPF CPSF
 #>
 ######################################################################
 p6df::modules::git::aliases::init() {
@@ -90,6 +90,7 @@ p6df::modules::git::aliases::init() {
   p6_alias "gSync" "p6_git_util_sync"
   p6_alias "gU" "p6_git_util_update"
   p6_alias "gCPSF" "p6_git_util_commit_push_squashed_fix"
+  p6_alias "gCPF" "p6_git_util_commit_push_fix"
 
   p6_alias "gA" "p6_git_cli_add_all"
   p6_alias "ga" "p6_git_cli_add"
