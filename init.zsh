@@ -30,6 +30,7 @@ p6df::modules::git::external::brew() {
   p6df::modules::homebrew::cli::brew::install git-secret
 
   p6df::modules::homebrew::cli::brew::install tig
+  p6_file_copy "$HOMEBREW_PREFIX"/opt/tig/share/tig/examples/tigrc "$HOMEBREW_PREFIX"/etc/tigrc
 
   git lfs install
 
