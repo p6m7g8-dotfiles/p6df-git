@@ -5,8 +5,6 @@
 ## Badges
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Mergify](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges//p6df-git/&style=flat)](https://mergify.io)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](<https://gitpod.io/#https://github.com//p6df-git>)
 
 ## Summary
 
@@ -23,13 +21,13 @@
 ### Aliases
 
 - g IS git
-- gA IS p6_git_cli_add_all
 - ga IS p6_git_cli_add
+- gA IS p6_git_cli_add_all
 - gb IS p6_git_cli_branch_verbose_verbose
 - gbc IS p6_git_cli_branch_create
 - gbD IS p6_git_cli_branch_Delete
-- gc IS p6_git_cli_commit_verbose
 - gC IS p6_git_cli_commit_with_message
+- gc IS p6_git_cli_commit_verbose
 - gcl IS p6_git_cli_commit_last_edit
 - gco IS p6_git_cli_checkout
 - gcod IS p6_git_util_checkout_default
@@ -44,8 +42,8 @@
 - ggf IS p6_git_cli_grep_files
 - gl IS p6_git_util_log
 - gm IS p6_git_cli_merge
-- gP IS p6_git_cli_push_u
 - gp IS p6_git_cli_pull_rebase_autostash_ff_only
+- gP IS p6_git_cli_push_u
 - gPF IS p6_git_cli_push_fu
 - gPt IS p6_git_cli_push_tags
 - gR IS p6_git_cli_restore

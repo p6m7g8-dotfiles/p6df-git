@@ -18,6 +18,7 @@ p6df::modules::git::deps() {
 #
 # Function: p6df::modules::git::external::brew()
 #
+#  Environment:	 HOMEBREW_PREFIX
 #>
 ######################################################################
 p6df::modules::git::external::brew() {
