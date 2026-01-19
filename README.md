@@ -2,75 +2,87 @@
 
 ## Table of Contents
 
+- [Badges](#badges)
+- [Summary](#summary)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
+- [Usage](#usage)
+  - [Aliases](#aliases)
+  - [Functions](#functions)
+- [Hierarchy](#hierarchy)
+- [Author](#author)
+
 ## Badges
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Summary
 
+TODO: Add a short summary of this module.
+
 ## Contributing
 
-- [How to Contribute](<https://github.com//.github/blob/main/CONTRIBUTING.md>)
+- [How to Contribute](<https://github.com/p6m7g8-dotfiles/.github/blob/main/CONTRIBUTING.md>)
 
 ## Code of Conduct
 
-- [Code of Conduct](<https://github.com//.github/blob/main/CODE_OF_CONDUCT.md>)
+- [Code of Conduct](<https://github.com/p6m7g8-dotfiles/.github/blob/main/CODE_OF_CONDUCT.md>)
 
 ## Usage
 
 ### Aliases
 
-- g IS git
-- ga IS p6_git_cli_add
-- gA IS p6_git_cli_add_all
-- gb IS p6_git_cli_branch_verbose_verbose
-- gbc IS p6_git_cli_branch_create
-- gbD IS p6_git_cli_branch_Delete
-- gC IS p6_git_cli_commit_with_message
-- gc IS p6_git_cli_commit_verbose
-- gcl IS p6_git_cli_commit_last_edit
-- gco IS p6_git_cli_checkout
-- gcod IS p6_git_util_checkout_default
-- gCPF IS p6_git_util_commit_push_fix
-- gCPSF IS p6_git_util_commit_push_squashed_fix
-- gd IS p6_git_cli_diff
-- gdd IS p6_git_util_diff_default
-- gdh IS p6_git_cli_diff_head
-- gdp IS p6_git_cli_diff_previous
-- gf IS p6_git_cli_fetch_all
-- gg IS p6_git_cli_grep
-- ggf IS p6_git_cli_grep_files
-- gl IS p6_git_util_log
-- gm IS p6_git_cli_merge
-- gp IS p6_git_cli_pull_rebase_autostash_ff_only
-- gP IS p6_git_cli_push_u
-- gPF IS p6_git_cli_push_fu
-- gPt IS p6_git_cli_push_tags
-- gR IS p6_git_cli_restore
-- gra IS p6_git_cli_rebase_abort
-- grc IS p6_git_cli_rebase_continue
-- grhh IS p6_git_cli_reset_hard_head
-- gs IS p6_git_cli_status_s
-- gSync IS p6_git_util_sync
-- gT IS p6_git_cli_revert
-- gU IS p6_git_util_update
+- `g` -> `git`
+- `gA` -> `p6_git_cli_add_all`
+- `ga` -> `p6_git_cli_add`
+- `gb` -> `p6_git_cli_branch_verbose_verbose`
+- `gbc` -> `p6_git_cli_branch_create`
+- `gbD` -> `p6_git_cli_branch_Delete`
+- `gc` -> `p6_git_cli_commit_verbose`
+- `gC` -> `p6_git_cli_commit_with_message`
+- `gcl` -> `p6_git_cli_commit_last_edit`
+- `gco` -> `p6_git_cli_checkout`
+- `gcod` -> `p6_git_util_checkout_default`
+- `gCPF` -> `p6_git_util_commit_push_fix`
+- `gCPSF` -> `p6_git_util_commit_push_squashed_fix`
+- `gd` -> `p6_git_cli_diff`
+- `gdd` -> `p6_git_util_diff_default`
+- `gdh` -> `p6_git_cli_diff_head`
+- `gdp` -> `p6_git_cli_diff_previous`
+- `gf` -> `p6_git_cli_fetch_all`
+- `gg` -> `p6_git_cli_grep`
+- `ggf` -> `p6_git_cli_grep_files`
+- `gl` -> `p6_git_util_log`
+- `gm` -> `p6_git_cli_merge`
+- `gP` -> `p6_git_cli_push_u`
+- `gp` -> `p6_git_cli_pull_rebase_autostash_ff_only`
+- `gPF` -> `p6_git_cli_push_fu`
+- `gPt` -> `p6_git_cli_push_tags`
+- `gR` -> `p6_git_cli_restore`
+- `gra` -> `p6_git_cli_rebase_abort`
+- `grc` -> `p6_git_cli_rebase_continue`
+- `grhh` -> `p6_git_cli_reset_hard_head`
+- `gs` -> `p6_git_cli_status_s`
+- `gSync` -> `p6_git_util_sync`
+- `gT` -> `p6_git_cli_revert`
+- `gU` -> `p6_git_util_update`
 
 ### Functions
 
-## p6df-git
+#### p6df-git
 
-### p6df-git/init.zsh
+##### p6df-git/init.zsh
 
-- p6df::modules::git::aliases::init()
-- p6df::modules::git::deps()
-- p6df::modules::git::external::brew()
-- p6df::modules::git::home::symlink()
-- p6df::modules::git::init(_module, dir)
-- p6df::modules::git::prompt::init()
-- p6df::modules::git::prompt::mod()
-- p6df::modules::git::prompt_precmd()
-- p6df::modules::git::vcs_info()
-- str str = p6_git_prompt_info()
+- `p6df::modules::git::aliases::init()`
+- `p6df::modules::git::deps()`
+- `p6df::modules::git::external::brew()`
+- `p6df::modules::git::home::symlink()`
+- `p6df::modules::git::init(_module, dir)`
+- `p6df::modules::git::prompt::init()`
+- `p6df::modules::git::prompt::mod()`
+- `p6df::modules::git::prompt_precmd()`
+- `p6df::modules::git::vcs_info()`
+- `str str = p6_git_prompt_info()`
 
 ## Hierarchy
 
@@ -85,4 +97,4 @@
 
 ## Author
 
-Philip M . Gollucci <pgollucci@p6m7g8.com>
+Philip M. Gollucci <pgollucci@p6m7g8.com>
