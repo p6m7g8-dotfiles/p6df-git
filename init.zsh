@@ -134,7 +134,6 @@ p6df::modules::git::aliases::init() {
 p6df::modules::git::prompt::init() {
 
   add-zsh-hook precmd p6df::modules::git::prompt_precmd
-  p6df::core::prompt::line::add p6df::modules::git::prompt::line
 }
 
 ######################################################################
@@ -176,11 +175,11 @@ p6df::modules::git::vcs_info() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::prompt::line()
+# Function: p6df::modules::git::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::git::prompt::line() {
+p6df::modules::git::prompt::mod() {
 
   p6_git_prompt_info
 }
