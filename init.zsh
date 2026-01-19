@@ -79,7 +79,6 @@ p6df::modules::git::init() {
 #
 # Function: p6df::modules::git::aliases::init()
 #
-#  Environment:	 CPF CPSF
 #>
 ######################################################################
 p6df::modules::git::aliases::init() {
