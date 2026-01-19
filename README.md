@@ -54,6 +54,7 @@
 - gSync IS p6_git_util_sync
 - gT IS p6_git_cli_revert
 - gU IS p6_git_util_update
+
 ### Functions
 
 ## p6df-git
