@@ -33,8 +33,8 @@ TODO: Add a short summary of this module.
 ### Aliases
 
 - `g` -> `git`
-- `gA` -> `p6_git_cli_add_all`
 - `ga` -> `p6_git_cli_add`
+- `gA` -> `p6_git_cli_add_all`
 - `gb` -> `p6_git_cli_branch_verbose_verbose`
 - `gbc` -> `p6_git_cli_branch_create`
 - `gbD` -> `p6_git_cli_branch_Delete`
@@ -54,8 +54,8 @@ TODO: Add a short summary of this module.
 - `ggf` -> `p6_git_cli_grep_files`
 - `gl` -> `p6_git_util_log`
 - `gm` -> `p6_git_cli_merge`
-- `gP` -> `p6_git_cli_push_u`
 - `gp` -> `p6_git_cli_pull_rebase_autostash_ff_only`
+- `gP` -> `p6_git_cli_push_u`
 - `gPF` -> `p6_git_cli_push_fu`
 - `gPt` -> `p6_git_cli_push_tags`
 - `gR` -> `p6_git_cli_restore`
