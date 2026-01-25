@@ -23,14 +23,14 @@ p6df::modules::git::deps() {
 ######################################################################
 p6df::modules::git::external::brew() {
 
-  p6df::modules::homebrew::cli::brew::install git
-  p6df::modules::homebrew::cli::brew::install git-delta
-  p6df::modules::homebrew::cli::brew::install git-extras
-  p6df::modules::homebrew::cli::brew::install git-lfs
-  p6df::modules::homebrew::cli::brew::install git-quick-stats
-  p6df::modules::homebrew::cli::brew::install git-secret
+  p6df::core::homebrew::cli::brew::install git
+  p6df::core::homebrew::cli::brew::install git-delta
+  p6df::core::homebrew::cli::brew::install git-extras
+  p6df::core::homebrew::cli::brew::install git-lfs
+  p6df::core::homebrew::cli::brew::install git-quick-stats
+  p6df::core::homebrew::cli::brew::install git-secret
 
-  p6df::modules::homebrew::cli::brew::install tig
+  p6df::core::homebrew::cli::brew::install tig
   p6_file_copy "$HOMEBREW_PREFIX"/opt/tig/share/tig/examples/tigrc "$HOMEBREW_PREFIX"/etc/tigrc
 
   git lfs install
