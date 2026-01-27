@@ -16,6 +16,26 @@ p6df::modules::git::deps() {
 ######################################################################
 #<
 #
+# Function: str json = p6df::modules::git::vscodes::config()
+#
+#  Returns:
+#	str - json
+#
+#>
+######################################################################
+p6df::modules::git::vscodes::config() {
+
+  cat <<'EOF'
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.graph.layout": "editor"
+EOF
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::git::external::brew()
 #
 #  Environment:	 HOMEBREW_PREFIX
