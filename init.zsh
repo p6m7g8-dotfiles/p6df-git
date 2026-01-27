@@ -128,6 +128,7 @@ p6df::modules::git::aliases::init() {
   p6_alias "gf" "p6_git_cli_fetch_all"
   p6_alias "gg" "p6_git_cli_grep"
   p6_alias "ggf" "p6_git_cli_grep_files"
+  p6_alias "gi" "p6_git_cli_init"
   p6_alias "gm" "p6_git_cli_merge"
   p6_alias "gp" "p6_git_cli_pull_rebase_autostash_ff_only"
   p6_alias "gP" "p6_git_cli_push_u"
