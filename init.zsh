@@ -216,7 +216,7 @@ p6df::modules::git::prompt::mod() {
 p6_git_prompt_info() {
 
   local str
-  if ! p6_string_blank "$g_org"; then
+  if p6_string_blank_NOT "$g_org"; then
     str="git:\t\t  $g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
   fi
 
