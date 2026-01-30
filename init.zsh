@@ -177,6 +177,7 @@ p6df::modules::git::prompt_precmd() {
 ######################################################################
 p6df::modules::git::vcs_info() {
 
+  p6_log_disable
   if p6_git_util_inside_tree; then
     g_org=$(p6_git_util_org_from_origin)
     g_repo=$(p6_git_util_repo_from_origin)
@@ -190,6 +191,9 @@ p6df::modules::git::vcs_info() {
     unset g_branch
     unset g_status
   fi
+  p6_log_enable
+
+  p6_return_void
 }
 
 ######################################################################
