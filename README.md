@@ -38,8 +38,8 @@ TODO: Add a short summary of this module.
 - `gb` -> `p6_git_cli_branch_verbose_verbose`
 - `gbc` -> `p6_git_cli_branch_create`
 - `gbD` -> `p6_git_cli_branch_Delete`
-- `gc` -> `p6_git_cli_commit_verbose`
 - `gC` -> `p6_git_cli_commit_with_message`
+- `gc` -> `p6_git_cli_commit_verbose`
 - `gcl` -> `p6_git_cli_commit_last_edit`
 - `gco` -> `p6_git_cli_checkout`
 - `gcod` -> `p6_git_util_checkout_default`
@@ -52,10 +52,11 @@ TODO: Add a short summary of this module.
 - `gf` -> `p6_git_cli_fetch_all`
 - `gg` -> `p6_git_cli_grep`
 - `ggf` -> `p6_git_cli_grep_files`
+- `gi` -> `p6_git_cli_init`
 - `gl` -> `p6_git_util_log`
 - `gm` -> `p6_git_cli_merge`
-- `gp` -> `p6_git_cli_pull_rebase_autostash_ff_only`
 - `gP` -> `p6_git_cli_push_u`
+- `gp` -> `p6_git_cli_pull_rebase_autostash_ff_only`
 - `gPF` -> `p6_git_cli_push_fu`
 - `gPt` -> `p6_git_cli_push_tags`
 - `gR` -> `p6_git_cli_restore`
@@ -78,10 +79,14 @@ TODO: Add a short summary of this module.
 - `p6df::modules::git::external::brew()`
 - `p6df::modules::git::home::symlink()`
 - `p6df::modules::git::init(_module, dir)`
+  - Args:
+    - _module - 
+    - dir - 
 - `p6df::modules::git::prompt::init()`
 - `p6df::modules::git::prompt::mod()`
 - `p6df::modules::git::prompt_precmd()`
 - `p6df::modules::git::vcs_info()`
+- `p6df::modules::git::vscodes::config()`
 - `str str = p6_git_prompt_info()`
 
 ## Hierarchy

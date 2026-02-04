@@ -16,10 +16,7 @@ p6df::modules::git::deps() {
 ######################################################################
 #<
 #
-# Function: str json = p6df::modules::git::vscodes::config()
-#
-#  Returns:
-#	str - json
+# Function: p6df::modules::git::vscodes::config()
 #
 #>
 ######################################################################
