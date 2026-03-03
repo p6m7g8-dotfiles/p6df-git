@@ -80,8 +80,8 @@ TODO: Add a short summary of this module.
 - `p6df::modules::git::home::symlink()`
 - `p6df::modules::git::init(_module, dir)`
   - Args:
-    - _module - 
-    - dir - 
+    - _module -
+    - dir -
 - `p6df::modules::git::prompt::init()`
 - `p6df::modules::git::prompt::mod()`
 - `p6df::modules::git::prompt_precmd()`
