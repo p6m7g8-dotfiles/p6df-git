@@ -10,6 +10,7 @@ p6df::modules::git::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-zsh
     p6m7g8-dotfiles/p6git
+    netresearch/git-workflow-skill
   )
 }
 
