@@ -51,7 +51,7 @@ p6df::modules::git::external::brew() {
   p6df::core::homebrew::cli::brew::install tig
   p6_file_copy "$HOMEBREW_PREFIX"/opt/tig/share/tig/examples/tigrc "$HOMEBREW_PREFIX"/etc/tigrc
 
-  git lfs install
+  p6_git_cli lfs install
 
   p6_return_void
 }
