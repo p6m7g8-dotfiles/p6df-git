@@ -204,7 +204,9 @@ p6df::modules::git::vcs_info() {
 ######################################################################
 p6df::modules::git::prompt::mod() {
 
-  p6_git_prompt_info
+  if p6_git_util_inside_tree; then
+    p6_git_prompt_info 2>/dev/null
+  fi
 }
 
 ######################################################################
