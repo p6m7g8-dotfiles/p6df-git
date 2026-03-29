@@ -34,12 +34,12 @@ EOF
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::external::brew()
+# Function: p6df::modules::git::external::brews()
 #
 #  Environment:	 HOMEBREW_PREFIX
 #>
 ######################################################################
-p6df::modules::git::external::brew() {
+p6df::modules::git::external::brews() {
 
   p6df::core::homebrew::cli::brew::install git
   p6df::core::homebrew::cli::brew::install git-delta
