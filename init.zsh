@@ -59,12 +59,12 @@ p6df::modules::git::external::brews() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::home::symlink()
+# Function: p6df::modules::git::home::symlinks()
 #
 #  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
-p6df::modules::git::home::symlink() {
+p6df::modules::git::home::symlinks() {
 
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitconfig" "$HOME/.gitconfig"
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitignore_global" "$HOME/.gitignore_global"
