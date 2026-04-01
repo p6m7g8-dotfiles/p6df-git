@@ -61,7 +61,7 @@ p6df::modules::git::external::brews() {
 #
 # Function: p6df::modules::git::home::symlinks()
 #
-#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::git::home::symlinks() {
@@ -75,32 +75,14 @@ p6df::modules::git::home::symlinks() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::init(_module, dir)
-#
-#  Args:
-#	_module -
-#	dir -
-#
-#>
-######################################################################
-p6df::modules::git::init() {
-  local _module="$1"
-  local dir="$2"
-
-  p6df::modules::git::prompt::init
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
 # Function: p6df::modules::git::aliases::init()
 #
 #>
 ######################################################################
 p6df::modules::git::aliases::init() {
 
+  local _module="$1"
+  local _dir="$2"
   p6_alias "g" "git"
 
   p6_alias "gcod" "p6_git_util_checkout_default"
@@ -152,6 +134,8 @@ p6df::modules::git::aliases::init() {
 ######################################################################
 p6df::modules::git::prompt::init() {
 
+  local _module="$1"
+  local _dir="$2"
   add-zsh-hook precmd p6df::modules::git::prompt_precmd
 }
 
@@ -178,8 +162,13 @@ p6df::modules::git::vcs_info() {
 
   p6_log_disable
   if p6_git_util_inside_tree; then
-    g_org=$(p6_git_util_org_from_origin)
-    g_repo=$(p6_git_util_repo_from_origin)
+    if p6_git_util_has_remote "origin"; then
+      g_org=$(p6_git_util_org_from_origin)
+      g_repo=$(p6_git_util_repo_from_origin)
+    else
+      unset g_org
+      unset g_repo
+    fi
     g_shortsha=$(p6_git_util_sha_short_get)
     g_branch=$(p6_git_branch_get)
     g_status=$(p6_git_util_dirty_get)
@@ -198,15 +187,13 @@ p6df::modules::git::vcs_info() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::prompt::mod()
+# Function: p6df::modules::git::prompt::context()
 #
 #>
 ######################################################################
-p6df::modules::git::prompt::mod() {
+p6df::modules::git::prompt::context() {
 
-  if p6_git_util_inside_tree; then
-    p6_git_prompt_info 2>/dev/null
-  fi
+  p6_git_prompt_info
 }
 
 ######################################################################
@@ -223,8 +210,9 @@ p6_git_prompt_info() {
 
   local str
   if p6_string_blank_NOT "$g_org"; then
-    str="git:\t\t  $g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
+    str="$(p6_string_space_pad "git:" 16)$g_org/$g_repo @ $g_shortsha ($g_branch) [$g_status]"
   fi
 
   p6_return_str "$str"
 }
+
