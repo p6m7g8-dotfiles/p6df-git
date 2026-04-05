@@ -1,5 +1,11 @@
 # shellcheck shell=bash
 ######################################################################
+#<
+#
+# Function: p6df::modules::git::deps()
+#
+#>
+######################################################################
 p6df::modules::git::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-zsh
@@ -8,6 +14,12 @@ p6df::modules::git::deps() {
   )
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::git::aliases::init()
+#
+#>
 ######################################################################
 p6df::modules::git::aliases::init() {
 
@@ -56,6 +68,12 @@ p6df::modules::git::aliases::init() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::git::prompt::init()
+#
+#>
+######################################################################
 p6df::modules::git::prompt::init() {
 
   local _module="$1"
@@ -63,6 +81,13 @@ p6df::modules::git::prompt::init() {
   add-zsh-hook precmd p6df::modules::git::prompt_precmd
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::git::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#>
 ######################################################################
 p6df::modules::git::home::symlinks() {
 
@@ -72,6 +97,13 @@ p6df::modules::git::home::symlinks() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::git::external::brews()
+#
+#  Environment:	 HOMEBREW_PREFIX
+#>
 ######################################################################
 p6df::modules::git::external::brews() {
 
@@ -91,6 +123,12 @@ p6df::modules::git::external::brews() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::git::vscodes::config()
+#
+#>
+######################################################################
 p6df::modules::git::vscodes::config() {
 
   cat <<'EOF'
@@ -101,44 +139,6 @@ EOF
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::git::deps()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::git::vscodes::config()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::git::external::brews()
-#
-#  Environment:	 HOMEBREW_PREFIX
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::git::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::git::aliases::init()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::git::prompt::init()
-#
-#>
 ######################################################################
 #<
 #
