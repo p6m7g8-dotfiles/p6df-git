@@ -17,7 +17,11 @@ p6df::modules::git::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::aliases::init()
+# Function: p6df::modules::git::aliases::init(_module, _dir)
+#
+#  Args:
+#	_module -
+#	_dir -
 #
 #>
 ######################################################################
@@ -70,7 +74,11 @@ p6df::modules::git::aliases::init() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::git::prompt::init()
+# Function: p6df::modules::git::prompt::init(_module, _dir)
+#
+#  Args:
+#	_module -
+#	_dir -
 #
 #>
 ######################################################################
