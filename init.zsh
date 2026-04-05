@@ -1,11 +1,5 @@
 # shellcheck shell=bash
 ######################################################################
-#<
-#
-# Function: p6df::modules::git::deps()
-#
-#>
-######################################################################
 p6df::modules::git::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-zsh
@@ -14,70 +8,6 @@ p6df::modules::git::deps() {
   )
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::git::vscodes::config()
-#
-#>
-######################################################################
-p6df::modules::git::vscodes::config() {
-
-  cat <<'EOF'
-  "git.openRepositoryInParentFolders": "never",
-  "gitlens.graph.layout": "editor"
-EOF
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::git::external::brews()
-#
-#  Environment:	 HOMEBREW_PREFIX
-#>
-######################################################################
-p6df::modules::git::external::brews() {
-
-  p6df::core::homebrew::cli::brew::install git
-  p6df::core::homebrew::cli::brew::install git-delta
-  p6df::core::homebrew::cli::brew::install git-extras
-  p6df::core::homebrew::cli::brew::install git-lfs
-  p6df::core::homebrew::cli::brew::install git-quick-stats
-  p6df::core::homebrew::cli::brew::install git-secret
-
-  p6df::core::homebrew::cli::brew::install tig
-  p6_file_copy "$HOMEBREW_PREFIX"/opt/tig/share/tig/examples/tigrc "$HOMEBREW_PREFIX"/etc/tigrc
-
-  p6_git_cli lfs install
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::git::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
-#>
-######################################################################
-p6df::modules::git::home::symlinks() {
-
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitconfig" "$HOME/.gitconfig"
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitignore_global" "$HOME/.gitignore_global"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::git::aliases::init()
-#
-#>
 ######################################################################
 p6df::modules::git::aliases::init() {
 
@@ -126,12 +56,6 @@ p6df::modules::git::aliases::init() {
 }
 
 ######################################################################
-#<
-#
-# Function: p6df::modules::git::prompt::init()
-#
-#>
-######################################################################
 p6df::modules::git::prompt::init() {
 
   local _module="$1"
@@ -139,6 +63,82 @@ p6df::modules::git::prompt::init() {
   add-zsh-hook precmd p6df::modules::git::prompt_precmd
 }
 
+######################################################################
+p6df::modules::git::home::symlinks() {
+
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitconfig" "$HOME/.gitconfig"
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-git/share/.gitignore_global" "$HOME/.gitignore_global"
+
+  p6_return_void
+}
+
+######################################################################
+p6df::modules::git::external::brews() {
+
+  p6df::core::homebrew::cli::brew::install git
+  p6df::core::homebrew::cli::brew::install git-delta
+  p6df::core::homebrew::cli::brew::install git-extras
+  p6df::core::homebrew::cli::brew::install git-lfs
+  p6df::core::homebrew::cli::brew::install git-quick-stats
+  p6df::core::homebrew::cli::brew::install git-secret
+
+  p6df::core::homebrew::cli::brew::install tig
+  p6_file_copy "$HOMEBREW_PREFIX"/opt/tig/share/tig/examples/tigrc "$HOMEBREW_PREFIX"/etc/tigrc
+
+  p6_git_cli lfs install
+
+  p6_return_void
+}
+
+######################################################################
+p6df::modules::git::vscodes::config() {
+
+  cat <<'EOF'
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.graph.layout": "editor"
+EOF
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::git::deps()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::git::vscodes::config()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::git::external::brews()
+#
+#  Environment:	 HOMEBREW_PREFIX
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::git::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::git::aliases::init()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::git::prompt::init()
+#
+#>
 ######################################################################
 #<
 #
