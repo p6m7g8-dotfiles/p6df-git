@@ -38,8 +38,8 @@ TODO: Add a short summary of this module.
 - `gb` -> `p6_git_cli_branch_verbose_verbose`
 - `gbc` -> `p6_git_cli_branch_create`
 - `gbD` -> `p6_git_cli_branch_Delete`
-- `gC` -> `p6_git_cli_commit_with_message`
 - `gc` -> `p6_git_cli_commit_verbose`
+- `gC` -> `p6_git_cli_commit_with_message`
 - `gcl` -> `p6_git_cli_commit_last_edit`
 - `gco` -> `p6_git_cli_checkout`
 - `gcod` -> `p6_git_util_checkout_default`
@@ -57,7 +57,7 @@ TODO: Add a short summary of this module.
 - `gm` -> `p6_git_cli_merge`
 - `gP` -> `p6_git_cli_push_u`
 - `gp` -> `p6_git_cli_pull_rebase_autostash_ff_only`
-- `gPF` -> `p6_git_cli_push_fu`
+- `gPFwl` -> `p6_git_cli_push_fwl`
 - `gPt` -> `p6_git_cli_push_tags`
 - `gR` -> `p6_git_cli_restore`
 - `gra` -> `p6_git_cli_rebase_abort`
@@ -74,16 +74,18 @@ TODO: Add a short summary of this module.
 
 ##### p6df-git/init.zsh
 
-- `p6df::modules::git::aliases::init()`
-- `p6df::modules::git::deps()`
-- `p6df::modules::git::external::brew()`
-- `p6df::modules::git::home::symlink()`
-- `p6df::modules::git::init(_module, dir)`
+- `p6df::modules::git::aliases::init(_module, _dir)`
   - Args:
-    - _module -
-    - dir -
-- `p6df::modules::git::prompt::init()`
-- `p6df::modules::git::prompt::mod()`
+    - _module
+    - _dir
+- `p6df::modules::git::deps()`
+- `p6df::modules::git::external::brews()`
+- `p6df::modules::git::home::symlinks()`
+- `p6df::modules::git::prompt::context()`
+- `p6df::modules::git::prompt::init(_module, _dir)`
+  - Args:
+    - _module
+    - _dir
 - `p6df::modules::git::prompt_precmd()`
 - `p6df::modules::git::vcs_info()`
 - `p6df::modules::git::vscodes::config()`
